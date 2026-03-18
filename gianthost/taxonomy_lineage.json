@@ -1,0 +1,127 @@
+{
+  "pseudo_taxids": {
+    "protist*": -1000001,
+    "Haptophyta/Stramenopiles*": -1000002
+  },
+  "label_to_lineage": {
+    "metazoa": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": 33154, "name": "Opisthokonta" },
+      { "taxid": 33208, "name": "Metazoa" }
+    ],
+    "protist": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" }
+    ],
+    "Mammalia": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": 33154, "name": "Opisthokonta" },
+      { "taxid": 33208, "name": "Metazoa" },
+      { "taxid": 6072, "name": "Eumetazoa" },
+      { "taxid": 33213, "name": "Bilateria" },
+      { "taxid": 33511, "name": "Deuterostomia" },
+      { "taxid": 7711, "name": "Chordata" },
+      { "taxid": 89593, "name": "Craniata" },
+      { "taxid": 7742, "name": "Vertebrata" },
+      { "taxid": 7776, "name": "Gnathostomata" },
+      { "taxid": 117570, "name": "Teleostomi" },
+      { "taxid": 117571, "name": "Euteleostomi" },
+      { "taxid": 8287, "name": "Sarcopterygii" },
+      { "taxid": 1338369, "name": "Dipnotetrapodomorpha" },
+      { "taxid": 32523, "name": "Tetrapoda" },
+      { "taxid": 32524, "name": "Amniota" },
+      { "taxid": 40674, "name": "Mammalia" }
+    ],
+    "Arthropoda": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": 33154, "name": "Opisthokonta" },
+      { "taxid": 33208, "name": "Metazoa" },
+      { "taxid": 6072, "name": "Eumetazoa" },
+      { "taxid": 33213, "name": "Bilateria" },
+      { "taxid": 33317, "name": "Protostomia" },
+      { "taxid": 1206794, "name": "Ecdysozoa" },
+      { "taxid": 88770, "name": "Panarthropoda" },
+      { "taxid": 6656, "name": "Arthropoda" }
+    ],
+    "Amoebozoa": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" },
+      { "taxid": 554915, "name": "Amoebozoa" }
+    ],
+    "Actinopteri": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": 33154, "name": "Opisthokonta" },
+      { "taxid": 33208, "name": "Metazoa" },
+      { "taxid": 6072, "name": "Eumetazoa" },
+      { "taxid": 33213, "name": "Bilateria" },
+      { "taxid": 33511, "name": "Deuterostomia" },
+      { "taxid": 7711, "name": "Chordata" },
+      { "taxid": 89593, "name": "Craniata" },
+      { "taxid": 7742, "name": "Vertebrata" },
+      { "taxid": 7776, "name": "Gnathostomata" },
+      { "taxid": 117570, "name": "Teleostomi" },
+      { "taxid": 117571, "name": "Euteleostomi" },
+      { "taxid": 7898, "name": "Actinopterygii" },
+      { "taxid": 186623, "name": "Actinopteri" }
+    ],
+    "Chlorophyta - Mamiellophyceae": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" },
+      { "taxid": 33090, "name": "Viridiplantae" },
+      { "taxid": 3041, "name": "Chlorophyta" },
+      { "taxid": 1035538, "name": "Mamiellophyceae" }
+    ],
+    "Haptophyta/Stramenopiles": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" },
+      { "taxid": -1000002, "name": "Haptophyta/Stramenopiles*" }
+    ],
+    "Chlorophyta - Trebouxiophyceae": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" },
+      { "taxid": 33090, "name": "Viridiplantae" },
+      { "taxid": 3041, "name": "Chlorophyta" },
+      { "taxid": 2692248, "name": "core chlorophytes" },
+      { "taxid": 75966, "name": "Trebouxiophyceae" }
+    ],
+    "Aves": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": 33154, "name": "Opisthokonta" },
+      { "taxid": 33208, "name": "Metazoa" },
+      { "taxid": 6072, "name": "Eumetazoa" },
+      { "taxid": 33213, "name": "Bilateria" },
+      { "taxid": 33511, "name": "Deuterostomia" },
+      { "taxid": 7711, "name": "Chordata" },
+      { "taxid": 89593, "name": "Craniata" },
+      { "taxid": 7742, "name": "Vertebrata" },
+      { "taxid": 7776, "name": "Gnathostomata" },
+      { "taxid": 117570, "name": "Teleostomi" },
+      { "taxid": 117571, "name": "Euteleostomi" },
+      { "taxid": 8287, "name": "Sarcopterygii" },
+      { "taxid": 1338369, "name": "Dipnotetrapodomorpha" },
+      { "taxid": 32523, "name": "Tetrapoda" },
+      { "taxid": 32524, "name": "Amniota" },
+      { "taxid": 8457, "name": "Sauropsida" },
+      { "taxid": 32561, "name": "Sauria" },
+      { "taxid": 1329799, "name": "Archelosauria" },
+      { "taxid": 8492, "name": "Archosauria" },
+      { "taxid": 436486, "name": "Dinosauria" },
+      { "taxid": 436489, "name": "Saurischia" },
+      { "taxid": 436491, "name": "Theropoda" },
+      { "taxid": 436492, "name": "Coelurosauria" },
+      { "taxid": 8782, "name": "Aves" }
+    ],
+    "__Haptophyta": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" },
+      { "taxid": 2608109, "name": "Haptista" },
+      { "taxid": 2830, "name": "Haptophyta" }
+    ],
+    "__Stramenopiles": [
+      { "taxid": 2759, "name": "Eukaryota" },
+      { "taxid": -1000001, "name": "protist*" },
+      { "taxid": 2698737, "name": "Sar" },
+      { "taxid": 33634, "name": "Stramenopiles" }
+    ]
+  }
+}
