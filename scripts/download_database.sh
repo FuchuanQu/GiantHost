@@ -2,11 +2,10 @@
 set -euo pipefail
 
 # GiantHost database download helper.
-# Fill in DATABASE_URL and optional DATABASE_MD5 before release.
 
-DATABASE_URL=""
-DATABASE_ARCHIVE_NAME="gianthost_db.tar.gz"
-DATABASE_MD5=""
+DATABASE_URL="https://github.com/FuchuanQu/GiantHost/releases/download/0.1.0/gianthost_db.zip"
+DATABASE_ARCHIVE_NAME="gianthost_db.zip"
+DATABASE_MD5="sha256:87defcfae57a3023d9ffb36634119c04499b4c6a3abd2b1a0a24585989511e67"
 
 TARGET_DIR="${1:-./db}"
 

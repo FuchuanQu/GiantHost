@@ -82,12 +82,11 @@ After installation, you can run either:
 - `python run.py ...`
 - `gianthost ...`
 
-### 4) Download database
+### Download database
 
-You can download all required database files manually (links to be added):
+You can download all required database files manually:
 
-- Main database package: `<DATABASE_DOWNLOAD_LINK>`
-- Mirror (optional): `<DATABASE_MIRROR_LINK>`
+- Main database package: `https://github.com/FuchuanQu/GiantHost/releases/download/0.1.0/gianthost_db.zip`
 
 Or use the helper script:
 
@@ -95,25 +94,6 @@ Or use the helper script:
 bash scripts/download_database.sh /path/to/db
 ```
 
-<!-- Before running the script, edit these placeholders in `scripts/download_database.sh`:
-
-- `DATABASE_URL`
-- `DATABASE_MD5` (optional)
-- `DATABASE_ARCHIVE_NAME` (optional)
-
-## Database Layout
-
-Your `--db` directory should contain:
-
-- `ncldv_complete.fasta`
-- `taxonomy.csv`
-- `gvog.complete.hmm`
-- `model/` (or your custom `--model-subdir`) with:
-  - `inference_config.json`
-  - recommended: `nested_kfold_bundle.pt`
-  - fallback: `*_final.pt` + `conformal_scores.npz`
-  - optional: `label_encoders.json`
- -->
 ## Run Inference
 
 ### Contig mode
