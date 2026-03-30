@@ -5,7 +5,7 @@ set -euo pipefail
 
 DATABASE_URL="https://github.com/FuchuanQu/GiantHost/releases/download/0.1.0/gianthost_db.zip"
 DATABASE_ARCHIVE_NAME="gianthost_db.zip"
-DATABASE_MD5="sha256:87defcfae57a3023d9ffb36634119c04499b4c6a3abd2b1a0a24585989511e67"
+DATABASE_MD5="25ab1f8f7c34feba6631aa0849bc9694"
 
 TARGET_DIR="${1:-./db}"
 
