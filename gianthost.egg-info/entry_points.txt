@@ -1,0 +1,2 @@
+[console_scripts]
+gianthost = gianthost.cli:main

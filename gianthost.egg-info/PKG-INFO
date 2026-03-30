@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: gianthost
+Version: 0.1.0
+Summary: GiantHost: NCLDV host prediction inference pipeline
+Author: NCLDV Host Project Team
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=1.5
+Requires-Dist: torch>=2.0
+Requires-Dist: biopython>=1.81
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: pyarrow>=12.0
+Requires-Dist: pyhmmer>=0.10
+
 # GiantHost
 
 GiantHost is a lightweight release for NCLDV host prediction inference.
@@ -141,105 +156,16 @@ gianthost \
   --strictness strict
 ```
 
-### Command-line Arguments
-
-GiantHost supports the following command-line arguments.
-
-### Required arguments
-
-- `--input`
-  - Required: Yes
-  - Description: Input path. For `contig` mode, this should be a FASTA file. For `mag` mode, this should be a folder containing FASTA files.
-  - Example: `--input /path/to/contigs.fasta`
-
-- `--db`
-  - Required: Yes
-  - Description: Database folder containing `gvog.complete.hmm`, `taxonomy.csv`, `ncldv_complete.fasta`, and a model subfolder.
-  - Example: `--db /path/to/db`
-
-- `--output`
-  - Required: Yes
-  - Description: Output CSV file path for prediction results.
-  - Example: `--output /path/to/predictions.csv`
-
-- `--midfolder`
-  - Required: Yes
-  - Description: Working directory for temporary/intermediate files (feature files, BLAST outputs, etc.).
-  - Example: `--midfolder /path/to/mid`
-
-### Optional arguments
-
-- `--input-type`
-  - Required: No
-  - Default: `contig`
-  - Choices: `contig`, `mag`
-  - Description: Selects whether input is single-contig FASTA or a MAG folder.
-
-- `--model-subdir`
-  - Required: No
-  - Default: `model`
-  - Description: Model subdirectory name under `--db`.
-  - Example: `--model-subdir model_256`
-
-- `--model-file`
-  - Required: No
-  - Default: None
-  - Description: Explicit checkpoint path. If set, GiantHost uses this model file instead of automatic search.
-  - Example: `--model-file /path/to/model_final.pt`
-
-- `--min-length`
-  - Required: No
-  - Default: `5000`
-  - Description: Minimum sequence length cutoff in `contig` mode. Shorter contigs are filtered out.
-
-- `--strictness`
-  - Required: No
-  - Default: `normal`
-  - Choices: `normal`, `strict`, `very_strict`
-  - Description: Controls conformal filtering strictness for host predictions.
-
-- `--alpha`
-  - Required: No
-  - Default: None
-  - Description: Overrides alpha in model inference config.
-  - Example: `--alpha 0.1`
-
-- `--threads`
-  - Required: No
-  - Default: `8`
-  - Description: Number of CPU threads used by external tools and feature extraction.
-
-- `--device`
-  - Required: No
-  - Default: `cpu`
-  - Choices: `cpu`, `cuda`
-  - Description: Inference device.
-
-- `--debug`
-  - Required: No
-  - Default: Disabled
-  - Description: Enables verbose debug logging.
-
-
 ## Output
 
-Main output is a compact CSV file with one row per sample.
-Columns are:
+Main output is a CSV file with prediction results per sample.
+Core columns include:
 
 - `sample_id`
-  - Input sequence/MAG identifier.
-
-- `predict_final`
-  - Final host prediction label.
-  - Derived from model output `host_group_2`.
-
-- `predict_set`
-  - Conformal prediction set in JSON list format.
-  - Examples: `[]`, `["Mammalia"]`, `["Aves", "Mammalia"]`.
-
-- `predict_lca`
-  - Lowest common ancestor summary of the prediction set.
-  - Derived from `host_group_2_lca`.
+- `virus_order`
+- `host_group_1`
+- `host_group_2`
+- `host_group_2_lca`
 
 <!-- ## Publish to GitHub
 

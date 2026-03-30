@@ -1,0 +1,12 @@
+name: gianthost
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - blast
+  - prodigal-gv
+  - pip:
+      - -r requirements.txt

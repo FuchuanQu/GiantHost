@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import json
 import logging
 from pathlib import Path
 
@@ -46,9 +47,31 @@ def main() -> int:
     out_path = Path(args.output).resolve()
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    front = [c for c in ["sample_id", "virus_order", "host_group_1", "host_group_2"] if c in result.columns]
-    rest = [c for c in result.columns if c not in front]
-    result = result[front + rest]
+    # Final release output: keep only prediction-facing columns.
+    if "host_group_2_set" in result.columns:
+        predict_set = result["host_group_2_set"].fillna("[]").astype(str)
+    else:
+        def _to_set_str(x):
+            if x is None:
+                return "[]"
+            s = str(x)
+            if s == "" or s.lower() == "nan" or s == "unclassified":
+                return "[]"
+            return json.dumps([s], ensure_ascii=False)
+
+        if "host_group_2" in result.columns:
+            predict_set = result["host_group_2"].map(_to_set_str)
+        else:
+            predict_set = ["[]"] * len(result)
+
+    out_df = result.assign(
+        predict_final=result.get("host_group_2"),
+        predict_set=predict_set,
+        predict_lca=result.get("host_group_2_lca", result.get("host_group_2")),
+    )
+
+    columns = [c for c in ["sample_id", "predict_final", "predict_set", "predict_lca"] if c in out_df.columns]
+    result = out_df[columns]
 
     result.to_csv(out_path, index=False)
     logging.info("Done. %d samples written to %s", len(result), out_path)
